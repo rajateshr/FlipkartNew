@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 13 23:27:44 IST 2020</td>
+<td>Started on:</td><td>Sun May 17 11:08:25 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>23 seconds (23803 ms)</td>
+<tr><td>Total time:</td><td>24 seconds (24903 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,14 +68,14 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestCases.LoginTestCases.loginpage()'><b>loginpage</b><br>Test class: TestCases.LoginTestCases<br>Test method: Login Page</td>
+<td title='TestCases.LoginTestCases.tearDownMethod()'><b>tearDownMethod</b><br>Test class: TestCases.LoginTestCases<br>Parameters: [TestResult name=verifyMyProfile status=FAILURE method=LoginTestCases.verifyMyProfile()[pri:1, instance:TestCases.LoginTestCases@2d554825] output={null}]</td>
 <td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=81.0.4044.138)
@@ -84,9 +84,8 @@ Command duration or timeout: 0 milliseconds
 Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
 System info: host: &apos;KARTIKR01-PC&apos;, ip: &apos;192.168.0.70&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64829}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 81.0.4044.138, webStorageEnabled: true}
-Session ID: f241d382e14a146f7571a63c547afea7
-*** Element info: {Using=xpath, value=//div[@class=&apos;_1jA3uo _34niwY&apos;]//div[@class=&apos;_1jcwFN _3dmQRh&apos;]//div[text()=&apos;My Profile123&apos;]}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55977}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 81.0.4044.138, webStorageEnabled: true}
+Session ID: 873c49d56b0f75678b7a63b1a97a3688
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
@@ -95,21 +94,16 @@ Session ID: f241d382e14a146f7571a63c547afea7
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at PageObjects.LoginPageObjectsFK.clickmyprofile(LoginPageObjectsFK.java:54)
-	at TestCases.LoginTestCases.loginpage(LoginTestCases.java:31)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
+	at DataUtilities.BrowserFactory.captureScreenshot(BrowserFactory.java:57)
+	at TestCases.BaseClass.tearDownMethod(BaseClass.java:55)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1415287515", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1415287515'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace89667399", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace89667399'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
 from unknown error: web view not found
   (Session info: chrome=81.0.4044.138)
   (Driver info: chromedriver=2.44.609538 (b655c5a60b0b544917107a59d4153d4bf78e1b90),platform=Windows NT 10.0.17763 x86_64) (WARNING: The server did not provide any stacktrace information)
@@ -117,9 +111,8 @@ Command duration or timeout: 0 milliseconds
 Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
 System info: host: &apos;KARTIKR01-PC&apos;, ip: &apos;192.168.0.70&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64829}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 81.0.4044.138, webStorageEnabled: true}
-Session ID: f241d382e14a146f7571a63c547afea7
-*** Element info: {Using=xpath, value=//div[@class=&apos;_1jA3uo _34niwY&apos;]//div[@class=&apos;_1jcwFN _3dmQRh&apos;]//div[text()=&apos;My Profile123&apos;]}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609538 (b655c5a60b0b54..., userDataDir: C:\Users\user\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:55977}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 81.0.4044.138, webStorageEnabled: true}
+Session ID: 873c49d56b0f75678b7a63b1a97a3688
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -132,21 +125,18 @@ Session ID: f241d382e14a146f7571a63c547afea7
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at PageObjects.LoginPageObjectsFK.clickmyprofile(LoginPageObjectsFK.java:54)
-	at TestCases.LoginTestCases.loginpage(LoginTestCases.java:31)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
+	at DataUtilities.BrowserFactory.captureScreenshot(BrowserFactory.java:57)
+	at TestCases.BaseClass.tearDownMethod(BaseClass.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:709)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
@@ -163,28 +153,49 @@ Session ID: f241d382e14a146f7571a63c547afea7
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>0</td>
-<td>TestCases.LoginTestCases@614c5515</td></tr>
+<td>TestCases.LoginTestCases@2d554825</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='TestCases.LoginTestCases.verifyMyProfile()'><b>verifyMyProfile</b><br>Test class: TestCases.LoginTestCases<br>Test method: Verifying the My Profile</td>
+<td title='TestCases.LoginTestCases.tearDownMethod()'><b>tearDownMethod</b><br>Test class: TestCases.LoginTestCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.LoginTestCases@2d554825</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases.LoginTestCases.verifyMyProfile()'><b>verifyMyProfile</b><br>Test class: TestCases.LoginTestCases</td>
 <td><div><pre>java.lang.NullPointerException
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at com.sun.proxy.$Proxy9.getText(Unknown Source)
-	at PageObjects.LoginPageObjectsFK.verifyAccLink(LoginPageObjectsFK.java:37)
-	at TestCases.LoginTestCases.verifyMyProfile(LoginTestCases.java:22)
+	at PageObjects.LoginPageObjectsFK.verifyAccLink(LoginPageObjectsFK.java:42)
+	at TestCases.LoginTestCases.verifyMyProfile(LoginTestCases.java:23)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace232543770", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace232543770'><pre>java.lang.NullPointerException
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace977210507", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace977210507'><pre>java.lang.NullPointerException
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at com.sun.proxy.$Proxy9.getText(Unknown Source)
-	at PageObjects.LoginPageObjectsFK.verifyAccLink(LoginPageObjectsFK.java:37)
-	at TestCases.LoginTestCases.verifyMyProfile(LoginTestCases.java:22)
+	at PageObjects.LoginPageObjectsFK.verifyAccLink(LoginPageObjectsFK.java:42)
+	at TestCases.LoginTestCases.verifyMyProfile(LoginTestCases.java:23)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -206,8 +217,21 @@ Session ID: f241d382e14a146f7571a63c547afea7
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>23</td>
-<td>TestCases.LoginTestCases@614c5515</td></tr>
+<td>24</td>
+<td>TestCases.LoginTestCases@2d554825</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestCases.LoginTestCases.loginpage()'><b>loginpage</b><br>Test class: TestCases.LoginTestCases</td>
+<td></td>
+<td>0</td>
+<td>TestCases.LoginTestCases@2d554825</td></tr>
 </table><p>
 </body>
 </html>

@@ -9,12 +9,6 @@
   </test> <!-- Test -->
   <test name="Test(failed)" parallel="tests">
     <classes>
-      <class name="TestCases.BaseClass">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- TestCases.BaseClass -->
       <class name="TestCases.LoginTestCases">
         <methods>
           <include name="tearDownMethod"/>
@@ -22,6 +16,11 @@
           <include name="verifyMyProfile"/>
         </methods>
       </class> <!-- TestCases.LoginTestCases -->
+      <class name="TestCases.BaseClass">
+        <methods>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- TestCases.BaseClass -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,10 +1,11 @@
 package TestCases;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 
 import DataUtilities.BrowserFactory;
@@ -13,20 +14,20 @@ import PageObjects.LoginPageObjectsFK;
 public class LoginTestCases extends BaseClass  {
 	LoginPageObjectsFK lp;
 	 
-  @Test(priority=1,description = "Verifying the My Profile")
+  @Test(priority=1)
   public void verifyMyProfile() throws Throwable {
-	test = report.startTest("Verifying the My Profile");
-	test.log(LogStatus.INFO,"Opening the application");
+	logger = extent.createTest("Verifying the My Profile");
+	logger.info("Opening the application");
 
 	  lp=new LoginPageObjectsFK();
 	  lp.verifyAccLink();
 	    
   }
   
-  @Test(priority=2,description = "Login Page")
+  @Test(priority=2)
   public void loginpage() throws Throwable {
-	test = report.startTest("Verifying login page");
-	test.log(LogStatus.INFO,"Click on MyProfile");
+	  logger = extent.createTest("Verifying login page");
+	logger.info("Click on MyProfile");
 	LoginPageObjectsFK lp=new LoginPageObjectsFK();
 	lp.clickmyprofile();
 	lp.verifyloginpage();
