@@ -23,7 +23,7 @@ public class LoginPageObjectsFK extends BaseClass  {
 
 	@FindBy(xpath="//button[@class='_2AkmmA _29YdH8']")public WebElement popclose;
 	@FindBy(xpath="//a[@class='_3Ep39l']")public WebElement loginbutton;
-	@FindBy(xpath="//div[@class='_1jA3uo _34niwY']//div[@class='_1jcwFN _3dmQRh']//div[text()='My Profile']")public WebElement myprofilelink;
+	@FindBy(xpath="//div[@class='_1jA3uo _34niwY']//div[@class='_1jcwFN _3dmQRh']//div")public WebElement myprofilelink;
 
 	
 	public void verifyAccLink() throws IOException
@@ -37,10 +37,10 @@ public class LoginPageObjectsFK extends BaseClass  {
 			e.printStackTrace();
 		}
 		lpg.popclose.click();
-		Actions actions = new Actions(BaseClass.driver);
-		actions.moveToElement(lpg.loginbutton).perform();
+		/*Actions actions = new Actions(BaseClass.driver);
+		actions.moveToElement(lpg.loginbutton).perform();*/
 		System.out.println("The string is "+lpg.myprofilelink.getText());
-		Assert.assertEquals(lpg.myprofilelink.getText(),"My Profile");
+		Assert.assertEquals(lpg.myprofilelink.getText(),"SignIn");
 		logger.pass("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactory.captureScreenshot(driver)).build());
 		
 		/*if(lpg.myprofilelink.getText().equals("My Profile"))

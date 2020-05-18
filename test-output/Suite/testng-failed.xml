@@ -12,13 +12,13 @@
       <class name="TestCases.LoginTestCases">
         <methods>
           <include name="tearDownMethod"/>
-          <include name="loginpage"/>
           <include name="verifyMyProfile"/>
         </methods>
       </class> <!-- TestCases.LoginTestCases -->
       <class name="TestCases.BaseClass">
         <methods>
           <include name="launchBrowser"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- TestCases.BaseClass -->
     </classes>
