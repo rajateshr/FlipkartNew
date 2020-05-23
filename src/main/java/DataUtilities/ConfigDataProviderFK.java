@@ -4,10 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class ConfigDataProvider {
+public class ConfigDataProviderFK {
 	static Properties pro;
 
-	public  ConfigDataProvider() {
+	public  ConfigDataProviderFK() {
 		File src=new File("C:\\workspace\\QaAutomation\\Flipkart\\Configeration\\Config.properties");
 		
 		try {

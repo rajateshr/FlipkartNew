@@ -7,8 +7,6 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-
-import DataUtilities.BrowserFactory;
 import PageObjects.LoginPageObjectsFK;
 
 public class LoginTestCases extends BaseClass  {

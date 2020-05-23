@@ -14,7 +14,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import DataUtilities.BrowserFactory;
+import DataUtilities.BrowserFactoryFK;
 import TestCases.BaseClass;
 
 public class LoginPageObjectsFK extends BaseClass  {
@@ -48,7 +48,7 @@ public class LoginPageObjectsFK extends BaseClass  {
 		actions.moveToElement(lpg.loginbutton).perform();*/
 		System.out.println("The string is "+lpg.loginlink.getText());
 		Assert.assertEquals(lpg.loginlink.getText(),"Login");
-		logger.pass("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactory.captureScreenshot(driver)).build());
+		logger.pass("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactoryFK.captureScreenshot(driver)).build());
 		
 		/*if(lpg.myprofilelink.getText().equals("My Profile"))
 		  {
@@ -76,12 +76,12 @@ public class LoginPageObjectsFK extends BaseClass  {
 		LoginPageObjectsFK lpg=PageFactory.initElements(BaseClass.driver,LoginPageObjectsFK.class);
 
 		Assert.assertTrue(lpg.emailaddress.isDisplayed());
-		logger.pass("Email Address is field present",MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactory.captureScreenshot(driver)).build());
+		logger.pass("Email Address is field present",MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactoryFK.captureScreenshot(driver)).build());
 		Assert.assertTrue(lpg.password.isDisplayed());
-		logger.pass("Password is field present",MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactory.captureScreenshot(driver)).build());
+		logger.pass("Password is field present",MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactoryFK.captureScreenshot(driver)).build());
 		Assert.assertTrue(lpg.Login.isDisplayed());
 		
-		logger.pass("Login button is field present",MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactory.captureScreenshot(driver)).build());
+		logger.pass("Login button is field present",MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactoryFK.captureScreenshot(driver)).build());
 	}
 	public void verifyerrormsg() throws IOException
 	{		
@@ -89,7 +89,7 @@ public class LoginPageObjectsFK extends BaseClass  {
 		logger.info("Clicking on Login button");
 		lpg.Login.click();
 		Assert.assertEquals(lpg.errormsg.getText(),"Please enter valid Email ID/Mobile number");
-		logger.pass("Error message is "+lpg.errormsg.getText(),MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactory.captureScreenshot(driver)).build());
+		logger.pass("Error message is "+lpg.errormsg.getText(),MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactoryFK.captureScreenshot(driver)).build());
 		
 	}
 	
@@ -97,7 +97,7 @@ public class LoginPageObjectsFK extends BaseClass  {
 	{		
 		LoginPageObjectsFK lpg=PageFactory.initElements(BaseClass.driver,LoginPageObjectsFK.class);
 		Assert.assertEquals(lpg.Login.getCssValue("background"),"rgba(0,0,0,.2)");
-		logger.pass("The background color of Login button "+lpg.Login.getCssValue("background"),MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactory.captureScreenshot(driver)).build());
+		logger.pass("The background color of Login button "+lpg.Login.getCssValue("background"),MediaEntityBuilder.createScreenCaptureFromPath(BrowserFactoryFK.captureScreenshot(driver)).build());
 		
 	}
 

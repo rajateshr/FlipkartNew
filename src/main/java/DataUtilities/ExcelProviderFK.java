@@ -6,10 +6,10 @@ import java.io.FileInputStream;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelProvider {
+public class ExcelProviderFK {
 	XSSFWorkbook wb;
 	XSSFSheet sh1;
-	public ExcelProvider()
+	public ExcelProviderFK()
 	{
 		try {
 			File src=new File("C:\\Users\\user\\Documents\\rajatesh\\FBBTestData\\FBBTestData.xlsx");
