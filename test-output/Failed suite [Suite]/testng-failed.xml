@@ -9,55 +9,18 @@
   </test> <!-- Test -->
   <test name="Test(failed)" parallel="tests">
     <classes>
+      <class name="TestCases.LoginTestCases">
+        <methods>
+          <include name="verifyerrormsg"/>
+          <include name="tearDownMethod"/>
+        </methods>
+      </class> <!-- TestCases.LoginTestCases -->
       <class name="TestCases.BaseClass">
         <methods>
           <include name="launchBrowser"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- TestCases.BaseClass -->
-      <class name="TestCases.LoginTestCases">
-        <methods>
-          <include name="tearDownMethod"/>
-          <include name="loginpage"/>
-          <include name="verifyMyProfile"/>
-        </methods>
-      </class> <!-- TestCases.LoginTestCases -->
     </classes>
   </test> <!-- Test(failed) -->
-  <test name="Test(failed)" parallel="tests">
-    <classes>
-      <class name="TestCases.BaseClass">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- TestCases.BaseClass -->
-      <class name="TestCases.LoginTestCases">
-        <methods>
-          <include name="tearDownMethod"/>
-          <include name="tearDownMethod"/>
-          <include name="loginpage"/>
-          <include name="verifyMyProfile"/>
-        </methods>
-      </class> <!-- TestCases.LoginTestCases -->
-    </classes>
-  </test> <!-- Test(failed) -->
-  <test name="Test(failed)(failed)" parallel="tests">
-    <classes>
-      <class name="TestCases.BaseClass">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- TestCases.BaseClass -->
-      <class name="TestCases.LoginTestCases">
-        <methods>
-          <include name="tearDownMethod"/>
-          <include name="tearDownMethod"/>
-          <include name="loginpage"/>
-          <include name="verifyMyProfile"/>
-        </methods>
-      </class> <!-- TestCases.LoginTestCases -->
-    </classes>
-  </test> <!-- Test(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Suite]] -->

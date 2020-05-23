@@ -11,8 +11,8 @@
     <classes>
       <class name="TestCases.LoginTestCases">
         <methods>
+          <include name="verifyerrormsg"/>
           <include name="tearDownMethod"/>
-          <include name="verifyMyProfile"/>
         </methods>
       </class> <!-- TestCases.LoginTestCases -->
       <class name="TestCases.BaseClass">

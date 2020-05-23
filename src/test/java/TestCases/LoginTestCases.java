@@ -26,11 +26,20 @@ public class LoginTestCases extends BaseClass  {
   
   @Test(priority=2)
   public void loginpage() throws Throwable {
-	  logger = extent.createTest("Verifying login page");
-	logger.info("Click on MyProfile");
+	  logger = extent.createTest("Verifying fields in login popup");
+	logger.info("Click on Login button");
 	LoginPageObjectsFK lp=new LoginPageObjectsFK();
-	lp.clickmyprofile();
-	lp.verifyloginpage();
+	lp.clickmylogin();
+	lp.verifyloginpopup();  
+  }
+  
+ 
+  @Test(priority=3)
+  public void verifyerrormsg() throws Throwable {
+	  logger = extent.createTest("Verifying error message with login with blank username");
+	LoginPageObjectsFK lp=new LoginPageObjectsFK();
+	lp.verifyerrormsg();
+
 
 	    
   }
