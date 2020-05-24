@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Failed suite [Suite]]]" parallel="tests">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
   <test name="Test">
     <classes>
       <class name="TestCases.BaseClass"/>
@@ -13,14 +13,15 @@
         <methods>
           <include name="verifyerrormsg"/>
           <include name="tearDownMethod"/>
+          <include name="loginpage"/>
+          <include name="verifyMyProfile"/>
         </methods>
       </class> <!-- TestCases.LoginTestCases -->
       <class name="TestCases.BaseClass">
         <methods>
           <include name="launchBrowser"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- TestCases.BaseClass -->
     </classes>
   </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Failed suite [Failed suite [Suite]]] -->
+</suite> <!-- Failed suite [Suite] -->

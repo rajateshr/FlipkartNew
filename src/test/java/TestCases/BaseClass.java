@@ -10,6 +10,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -29,9 +30,7 @@ public class BaseClass extends BrowserFactoryFK   {
 	public static ExtentTest logger;
 	public static ExtentReports extent;
 
-
-	  
-	  @BeforeSuite
+     @BeforeSuite
 	  public void launchBrowser()throws IOException
 	  {
 		  ExtentHtmlReporter reporter=new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/ExtentReportResults"+BrowserFactoryFK.getCurrentDateTime()+".html"));
@@ -40,6 +39,7 @@ public class BaseClass extends BrowserFactoryFK   {
 		  extent = new ExtentReports();
 		  extent.attachReporter(reporter);
 		  driver=BrowserFactoryFK.startApplication(driver,config.getBrowser(),config.getStagingUrl());
+		  //driver=BrowserFactoryFK.startApplication(driver,browser,url);
 		 
 	  }
 	  @AfterSuite
