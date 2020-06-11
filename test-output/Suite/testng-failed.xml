@@ -12,16 +12,11 @@
       <class name="TestCases.LoginTestCases">
         <methods>
           <include name="verifyerrormsg"/>
-          <include name="tearDownMethod"/>
           <include name="loginpage"/>
           <include name="verifyMyProfile"/>
+          <include name="invalidlogin"/>
         </methods>
       </class> <!-- TestCases.LoginTestCases -->
-      <class name="TestCases.BaseClass">
-        <methods>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- TestCases.BaseClass -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

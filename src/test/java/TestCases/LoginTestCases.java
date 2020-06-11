@@ -41,4 +41,15 @@ public class LoginTestCases extends BaseClass  {
 
 	    
   }
+  @Test(priority=4)
+  public void invalidlogin() throws Throwable {
+	  logger = extent.createTest("Verifying error message with login with invalid username/password");
+	LoginPageObjectsFK lp=new LoginPageObjectsFK();
+	String Username=excel.getStringData("Login", 1, 0);
+	String Password=excel.getStringData("Login", 1, 1);
+	lp.verifyinvalidlogin(Username,Password);
+
+
+	    
+  }
 }

@@ -25,21 +25,22 @@ import DataUtilities.ExcelProviderFK;
 
 public class BaseClass extends BrowserFactoryFK   {
 	public static WebDriver driver;
-	public ExcelProviderFK excel;
+	public static ExcelProviderFK excel;
 	public ConfigDataProviderFK config;
 	public static ExtentTest logger;
 	public static ExtentReports extent;
 
-     @BeforeSuite
-	  public void launchBrowser()throws IOException
+    @Parameters({"browser","urlToBeTest"}) 
+	@BeforeSuite
+	  public void launchBrowser(String browser,String url)throws IOException
 	  {
-		  ExtentHtmlReporter reporter=new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/ExtentReportResults"+BrowserFactoryFK.getCurrentDateTime()+".html"));
+		  ExtentHtmlReporter reporter=new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/ExtentReportResults.html"));
 		  excel=new ExcelProviderFK();
 		  config=new ConfigDataProviderFK();
 		  extent = new ExtentReports();
 		  extent.attachReporter(reporter);
-		  driver=BrowserFactoryFK.startApplication(driver,config.getBrowser(),config.getStagingUrl());
-		  //driver=BrowserFactoryFK.startApplication(driver,browser,url);
+		  //driver=BrowserFactoryFK.startApplication(driver,config.getBrowser(),config.getStagingUrl());
+		  driver=BrowserFactoryFK.startApplication(driver,browser,url);
 		 
 	  }
 	  @AfterSuite
