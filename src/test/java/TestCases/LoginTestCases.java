@@ -26,7 +26,7 @@ public class LoginTestCases extends BaseClass  {
   public void loginpage() throws Throwable {
 	  logger = extent.createTest("Verifying fields in login popup");
 	logger.info("Click on Login button");
-	LoginPageObjectsFK lp=new LoginPageObjectsFK();
+	lp=new LoginPageObjectsFK();
 	lp.clickmylogin();
 	lp.verifyloginpopup();  
   }
@@ -35,21 +35,40 @@ public class LoginTestCases extends BaseClass  {
   @Test(priority=3)
   public void verifyerrormsg() throws Throwable {
 	  logger = extent.createTest("Verifying error message with login with blank username");
-	LoginPageObjectsFK lp=new LoginPageObjectsFK();
-	lp.verifyerrormsg();
+	  lp=new LoginPageObjectsFK();
+	  lp.verifyerrormsg();
 
 
 	    
   }
   @Test(priority=4)
-  public void invalidlogin() throws Throwable {
-	  logger = extent.createTest("Verifying error message with login with invalid username/password");
-	LoginPageObjectsFK lp=new LoginPageObjectsFK();
-	String Username=excel.getStringData("Login", 1, 0);
-	String Password=excel.getStringData("Login", 1, 1);
-	lp.verifyinvalidlogin(Username,Password);
-
-
+  public void invalidpwdlogin() throws Throwable {
+	  logger = extent.createTest("Verifying error message with login with invalid password");
+	/*String Username=excel.getStringData("Login", 1, 0);
+	String Password=excel.getStringData("Login", 1, 1);*/
+	lp=new LoginPageObjectsFK();
+	lp.verifyinvalidpwdlogin();
+	    
+  }
+  @Test(priority=5)
+  public void invalidunlogin() throws Throwable {
+	  logger = extent.createTest("Verifying error message with login with invalid username");
+	/*String Username=excel.getStringData("Login", 1, 0);
+	String Password=excel.getStringData("Login", 1, 1);*/
+	lp=new LoginPageObjectsFK();
+	lp.verifyinvalidusnlogin();
+	
+	    
+  }
+  @Test(priority=6)
+  public void validlogin() throws Throwable {
+	  logger = extent.createTest("Verifying error message with login with invalid username");
+	/*String Username=excel.getStringData("Login", 1, 0);
+	String Password=excel.getStringData("Login", 1, 1);*/
+	lp=new LoginPageObjectsFK();
+	lp.existLoginclick();
+	lp.verifyvalidlogin();
+	
 	    
   }
 }

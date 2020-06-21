@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -30,11 +31,12 @@ public class BaseClass extends BrowserFactoryFK   {
 	public static ExtentTest logger;
 	public static ExtentReports extent;
 
+
     @Parameters({"browser","urlToBeTest"}) 
 	@BeforeSuite
 	  public void launchBrowser(String browser,String url)throws IOException
 	  {
-		  ExtentHtmlReporter reporter=new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/ExtentReportResults.html"));
+    	ExtentHtmlReporter reporter=new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/ExtentReportResults.html"));
 		  excel=new ExcelProviderFK();
 		  config=new ConfigDataProviderFK();
 		  extent = new ExtentReports();

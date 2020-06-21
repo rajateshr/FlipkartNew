@@ -12,7 +12,7 @@ public class ExcelProviderFK {
 	public ExcelProviderFK()
 	{
 		try {
-			File src=new File("C:\\Users\\user\\Documents\\rajatesh\\FBBTestData\\FBBTestData.xlsx");
+			File src=new File("C:\\Users\\NEW\\Documents\\Documents\\TestData\\FlipKartTestData.xlsx");
 			FileInputStream fis=new FileInputStream(src);
 			 wb=new XSSFWorkbook(fis);
 		} catch (Exception e) {
